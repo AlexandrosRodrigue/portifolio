@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&family=Playwrite+IN:wght@100..400&family=Roboto+Slab:wght@100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <title>Alexandros Rodrigues</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="theme">
+                <i class="bi bi-brightness-high icon"></i>
+                <label class="switch">
+                    <input type="checkbox" id="toggleSwitch" onchange="toggleTheme()">
+                    <span class="slider"></span>
+                </label>
+                <i class="bi bi-moon icon"></i>
+            </div>
+            <div class="divIdioma" id="idiomaDropdown">
+                <a class="idioma" onclick="toggleLanguageDropdown(event)">
+                    <label class="tituloHeader iceberg-regular">Idioma</label>
+                    <i class="bi bi-arrow-right icon-arrow"></i>
+                </a>
+                <div class="flex" id="languageDropdown">
+                    <a class="escolhasIdioma iceberg-regular" onclick="idiomaSelecionado('Português')">Português</a>
+                    <a class="escolhasIdioma iceberg-regular" onclick="idiomaSelecionado('English')">English</a>
+                    <a class="escolhasIdioma iceberg-regular" onclick="idiomaSelecionado('Español')">Español</a>
+                </div>
+            </div>
+        </div>
+        <div class="images">
+            <div class="textIntro">
+                <h1 class="titulos iceberg-regular" id="titulos">Olá, Sou Alexandros</h1>
+                <h2 class="titulos iceberg-regular" id="subTitulos">Desenvolvedor Fullstack.</h2>
+            </div>
+            <img src="./img/ovni.webp" alt="ovni" class="ovniImg">
+        </div>
+        <div class="caminhos">
+            <div class="conteudo">
+                <a class="caminho" onclick="toggleCertificado(event)">
+                    <div class="column">
+                        <h2 class="iceberg-regular" id="certificados">Certificados</h2>
+                        <label class="iceberg-regular" id="subCertificados">Veja meus certificados de formação</label>
+                    </div>
+                    <i class="bi bi-arrow-bar-down icon"></i>
+                </a>
+                <div class="divCertificados" id="toggleConteudo">
+                    <a class="certificado">
+                        <div class="logoCertificados">
+                            <img src="./img/uniasselvi.jpg" alt="uniasselvi" class="uniasselviLogo">
+                        </div>
+                        <h2 class="iceberg-regular">Análise e Desenvolvimento de Sistemas</h2>
+                    </a>
+                    <a class="certificado">
+                        <div class="logoCertificados">
+                            <img src="./img/logoSenai.png" alt="senai" class="imgLogo">
+                        </div>
+                        <h2 class="iceberg-regular">Técnico em Análise e Desenvolvimento de Sistemas</h2>
+                    </a>
+                    <a class="certificado">
+                        <div class="logoCertificados">
+                            <img src="./img/certiProf.png" alt="certiProf" class="certiProfLogo">
+                        </div>
+                        <h2 class="iceberg-regular">Scrum Foundation Professional Certification SFPC</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="conteudo">
+                <a class="caminho" onclick="toggleExperiencia(event)">
+                    <div class="column">
+                        <h2 class="iceberg-regular" id="experiencias">Expêriencias Profissionais</h2>
+                        <label class="iceberg-regular" id="subExperiencias">Confira minhas experiências profissionais</label>
+                    </div>
+                    <i class="bi bi-arrow-bar-down icon"></i>
+                </a>
+            </div>
+            <div class="conteudo">
+                <a class="caminho" onclick="toggleFerramentas(event)">
+                    <div class="column">
+                        <h2 class="iceberg-regular" id="ferramentas">Ferramentas e Linguagens</h2>
+                        <label class="iceberg-regular" id="subFerramentas">Confira minhas habilidades de programação</label>
+                    </div>
+                    <i class="bi bi-arrow-bar-down icon"></i>
+                </a>
+            </div>
+            <div class="conteudo">
+                <a class="caminho" onclick="toggleProjetos(event)">
+                    <div class="column">
+                        <h2 class="iceberg-regular" id="projetos">Projetos</h2>
+                        <label class="iceberg-regular" id="subProjetos">Olhe meus projetos criados</label>
+                    </div>
+                    <i class="bi bi-arrow-bar-down icon"></i>
+                </a>
+            </div>
+            <div class="conteudo">
+                <a class="caminho" onclick="toggleSobre(event)">
+                    <div class="column">
+                        <h2 class="iceberg-regular" id="sobre">Sobre</h2>
+                        <label class="iceberg-regular" id="subSobre">Conheça mais sobre mim</label>
+                    </div>
+                    <i class="bi bi-arrow-bar-down icon"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer">
+            <label class="iceberg-regular">Alexandros Rodrigues Kotzias</label>
+            <label class="iceberg-regular">(48) 984516397</label>
+            <label class="iceberg-regular">alexkotzias06@gmail.com</label>
+            <label class="iceberg-regular">Florianópolis - SC</label>
+        </div>
+    </div>
+</body>
+</html>

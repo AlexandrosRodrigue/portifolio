@@ -1,0 +1,363 @@
+:root {
+    --backgroundColor_intro: #fff;
+    --color_text: #1A202C;
+    --color_border: #eeeeee83;
+    --color_border_conteudo: #5c585883;
+    --backgroundColor_a_houver: #f0f0f0;
+    --box_shadow_redes: #13131336;
+    --box_shadow_redes_hover: #1313136e;
+    --box_shadow_titulos_hover: #13131333;
+}
+
+[data-theme='dark'] {
+    --backgroundColor_intro: #1A202C;
+    --color_text: #fff;
+    --color_border: #3d3d3d33;
+    --color_border_conteudo: #87848440;
+    --backgroundColor_a_houver: #1d1c1c;
+    --box_shadow_redes: #61616136;
+    --box_shadow_redes_hover: #75757541;
+    --box_shadow_titulos_hover: #1313136e;
+}
+
+.iceberg-regular {
+  font-family: "Iceberg", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--backgroundColor_intro);
+    overflow-y: auto;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme {
+    margin-right: 7px;
+}
+
+.icon {
+    color: var(--color_text);
+    font-size: 1.2rem;
+    margin: 5px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 3px;
+    bottom: 2.5px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(18px);
+}
+
+.divIdioma {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloHeader {
+    cursor: pointer;
+}
+
+.idioma {
+    cursor: pointer;
+    display: flex;
+    align-items: end;
+    text-decoration: none;
+    color: var(--color_text);
+}
+
+.icon-arrow {
+    margin-left: 3px;
+    font-size: 13px;
+}
+  
+.flex {
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+}
+  
+.escolhasIdioma {
+    margin: 5px;
+    text-decoration: none;
+    color: var(--color_text);
+    cursor: pointer;
+}
+
+.show-dropdown {
+    display: flex;
+}
+
+.images {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.titulos {
+    font-size: 1.8rem;
+    color: var(--color_text);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0);
+    margin: 0px 5px 0px 0px;
+}
+
+#subTitulos {
+    font-size: 1.3rem;
+}
+
+.luz-verde {
+    text-shadow: 0 0 15px #66f566c0, 0 0 30px #66f566c0, 0 0 45px #66f566c0;
+}
+
+.ovniImg {
+    width: 300px;
+    height: 120px;
+    position: absolute;
+    animation: flutuar 7s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translate(-100vw, 0);
+    }
+    25% {
+        transform: translate(300px, -120px);
+    }
+    50% {
+        transform: translate(100px, 150px);
+    }
+    75% {
+        transform: translate(0, -20px); 
+    }
+    100% {
+        transform: translate(100vw, 0);
+    }
+}
+
+
+@keyframes iluminarTexto {
+    0% {
+        opacity: 0;
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0);
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.6);
+    }
+    100% {
+        opacity: 0;
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0);
+    }
+}
+
+
+.caminhos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+.caminhos::before,
+.caminhos::after {
+    content: "";
+    width: 85%;
+    border-top: 2px solid var(--color_border);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.caminhos::before {
+    top: 0; 
+}
+
+.caminhos::after {
+    bottom: 0;
+    border-top: none;
+    border-bottom: 2px solid var(--color_border);
+}
+
+.conteudo {
+    width: 85%;
+    min-width: 265px;
+    border: 2px solid var(--color_border_conteudo);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.caminho {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 10px 40px;
+    text-decoration: none;
+}
+
+.caminho:hover {
+    padding: 20px 0px 20px 40px;
+}
+
+.column {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.column h2 {
+    font-size: 1.5rem;
+    color: var(--color_text);
+    margin: 0;
+    cursor: pointer;
+}
+
+.column label {
+    color: var(--color_text);
+    margin: 0;
+    cursor: pointer;
+}
+
+.divCertificados {
+    width: 100%;
+    border-top: 2px solid var(--color_border);
+    display: none;
+    padding-top: 2px;
+}
+
+.certificado {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 0px 10px 0px;
+    cursor: pointer;
+}
+
+.certificado:hover {
+    background-color: var(--color_border);
+}
+
+.logoCertificados {
+    width: 100px;
+    height: 100%;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.show-dropdown {
+    display: block;
+}
+
+.imgLogo {
+    width: 90px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.uniasselviLogo {
+    width: 90px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.certiProfLogo {
+    width: 80px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.certificado h2 { 
+    font-size: 1.3rem;
+    color: var(--color_text);
+    margin: 0;
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    min-width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color_text);
+}
+
+@media (max-width: 560px) {
+    .caminho {
+        padding: 10px 0px 10px 5px;
+    }
+    .caminho:hover {
+        padding: 20px 0px 20px 5px;
+    }
+  }
