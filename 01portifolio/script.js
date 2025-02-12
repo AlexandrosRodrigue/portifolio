@@ -206,3 +206,57 @@ function idiomaSelecionado(idioma) {
 
     localStorage.setItem('idiomaSelecionado', idioma);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.querySelector(".customModalUniasselvi");
+    const openModalBtn = document.querySelector(".modalUniasselvi");
+    const closeModalBtns = document.querySelectorAll(".close-modal");
+  
+    openModalBtn.addEventListener("click", function () {
+      modal.style.display = "flex";
+    });
+
+    closeModalBtns.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+    });
+  });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.querySelector(".customModalSenai");
+    const openModalBtn = document.querySelector(".modalSenai");
+    const closeModalBtns = document.querySelectorAll(".close-modal");
+  
+    openModalBtn.addEventListener("click", function () {
+      modal.style.display = "flex";
+    });
+
+    closeModalBtns.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+    });
+  });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.querySelector(".custom-modal");
+    const openModalBtn = document.querySelector(".open-modal");
+    const closeModalBtns = document.querySelectorAll(".close-modal");
+  
+    openModalBtn.addEventListener("click", function () {
+      modal.style.display = "flex";
+    });
+
+    closeModalBtns.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+    });
+    // modal.addEventListener("click", function (event) {
+    //   if (event.target === modal) {
+    //     modal.style.display = "none";
+    //   }
+    // });
+  });
+  
